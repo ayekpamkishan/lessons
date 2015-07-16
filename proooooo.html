@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body>
+ <script src="func.js"></script>     
+
+  <div id="tab" class="relative">
+  <div onclick="tab1()" id="news" class="tc1"><center>News</center> </div>  
+  <div onclick="tab2()" id="sub" class="tc2"><center>Subscribe</center></div>
+    <div id="left" class="absoluteLeft">
+      		<h3>Welcome</h3>
+      		<p id="pf">Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library. Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library.</p>
+
+      		<p id="ps">AngularJS bindings for FusionCharts JavaScript Charting Library</p>
+    </div>
+    <div id="right" class="absoluteRight">
+      		<h3>Latest News</h3>
+      		<img src="tc.jpg">
+    </div>
+    	   <button type="submit" onclick="" id="lern" class="l-button"><center>LEARN MORE</center></button>
+
+    <div id="form" class="form1" >
+        <h3>Subscription Form</h3>
+        <form  id="sub_form" name="form1name">
+            <table cellspacing="7">
+              <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name" class="fsize"></td>
+                <td >Country</td>
+                <td><select id="country" name="country" class="fsize">
+                <option value="-1" > </option>
+                <option value="India" >India</option>
+                </select></td> 
+              </tr>
+              <tr>
+                <td>Email</td>
+                  <td><input type="text" name="email" id="email" class="fsize"></td>
+                  <td>Address</td>
+                  <td><textarea name="address" rows="3" cols="32"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Sex</td>
+                <td><input type="radio" name="sex" value="male">Male
+                <input type="radio" name="sex" value="Female">Female</td>
+              </tr>
+              <tr>
+                <td>Interest</td>
+                <td><input type="checkbox" name="interest" class="inter" value="Football">Football
+                <input type="checkbox" name="Interest" value="Movie"class="inter">Movie
+                <input type="checkbox" name="Interest" value="Reading" class="inter">Reading</td>
+              </tr>
+              <tr>
+                <td><input type="reset" value="Reset All"></td></tr>
+            
+            </table>
+                
+        </form>
+    </div>
+    <button type="submit" onclick="jsonval()" id="subscribe" class="s-button"><center>SUBSCRIBE</center></button> 
+  </div>
+</body>
+</html>

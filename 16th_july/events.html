@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body>
+ <script src="func.js"></script>     
+
+  <div id="tab" class="relative">
+  <div onclick="tab1()" id="news" class="tc1"><center>News</center> </div>  
+  <div onclick="tab2()" id="sub" class="tc2"><center>Subscribe</center></div>
+    <div id="left" class="absoluteLeft">
+      		<span class="h1"><h3>Welcome</h3>
+      		<p id="pf">Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library. Simple and effective AngularJS bindings for FusionCharts JavaScript Charting Library.</p>
+
+      		<p id="ps">AngularJS bindings for FusionCharts JavaScript Charting Library</p></span>
+    </div>
+
+    <div id="right" class="absoluteRight">
+      		<span class="h2"><h3>Latest News</h3></span>
+          <img src="tc.jpg">
+    </div>
+    	   <button type="submit" onclick="" id="lern" class="l-button"><center>LEARN MORE</center></button>
+
+<form name="form1name">
+    <div id="form" class="form1" >
+        <h3><span class="h3">Subscription Form</span></h3>
+
+        <div class="formleft">
+              <table border="0" cellspacing="13" cellpadding="0">
+                <tr>
+                  <td><span class="label">Name</span></td>
+                  <td><input type="text" name="name" id="name" class="fsize"></td>
+                </tr>
+                <tr>
+                  <td><span class="label">Email</span></td>
+                  <td><input type="text" name="email" id="email" class="fsize"></td>
+                </tr>
+                <tr>
+                  <td><span class="label">Mobile</span></td>
+                  <td><input type="text" maxlength="10" pattern="[0-9]" onkeypress="return check(event)" onblur="validno()" name="mobile" id="phone" class="fsize" required></td>
+                </tr>
+                <tr>
+                  <td><span class="label">Sex</span></td>
+                  <td>
+                    <input type="radio" name="sex" value="male"><span class="label">Male</span>
+                    <input type="radio" name="sex" value="Female"><span class="label">Female</span>
+                </tr>
+                <tr>
+                  <td><span class="label">Interest</span></td>
+                  <td>
+                    <input type="checkbox" name="interest" class="inter" value="Football"><span class="label">Football</span>
+                    <input type="checkbox" name="Interest" value="Movie"class="inter"><span class="label">Movie</span>
+                    <input type="checkbox" name="Interest" value="Reading" class="inter"><span class="label">Reading
+                  </span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="formright">
+              <table border="0" cellspacing="13" cellpadding="0">
+                <tr>
+                  <td><span class="label">Country</span></td>
+                  <td><select id="country" name="country" class="fsize">
+                      <option value="-1" > </option>
+                      <option value="ZM">India</option>
+                      <option value="ZW">US</option>
+                      </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="label" >States</span></td>
+                  <td><select id="states" name="states" class="fsize" disabled>
+                      <option value="-1" > </option>
+                      
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><span class="label">Address</span></td>
+                  <td><span class="tarea"><textarea name="address" rows="4" cols="28"></textarea></span>
+                </tr>
+                
+              </table>
+              
+            </div>
+        
+   </div> 
+   <button type="reset" id="rst" class="r-button"><center>RESET</center></button>
+   <button type="submit" onclick="jsonval()" id="subscribe" class="s-button"><center>SUBSCRIBE</center></button>
+  </td></tr>
+</form>
+  </div>
+</body>
+</html>

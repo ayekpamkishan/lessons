@@ -62,16 +62,16 @@
               <table border="0" cellspacing="13" cellpadding="0">
                 <tr>
                   <td><span class="label">Country</span></td>
-                  <td><select id="country" name="country" class="fsize">
+                  <td><select id="country" name="country" class="fsize" onchange="State(this.value)">
                       <option value="-1" > </option>
-                      <option value="ZM">India</option>
-                      <option value="ZW">US</option>
+                      <option value="IN">India</option>
+                      <option value="US">US</option>
                       </select>
                   </td>
                 </tr>
                 <tr>
                   <td><span class="label" >States</span></td>
-                  <td><select id="states" name="states" class="fsize" disabled>
+                  <td><select id="state" name="state" class="fsize" disabled>
                       <option value="-1" > </option>
                       
                   </td>

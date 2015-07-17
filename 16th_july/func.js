@@ -28,7 +28,7 @@ function tab1()
  function check(e)
 {
   var phone=document.getElementById("phone");
-  phone.style.borderColor = "green";
+  phone.style.borderColor = "none";
     var no=e.which;
     if (no<48||no>57)
             return false

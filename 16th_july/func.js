@@ -27,6 +27,8 @@ function tab1()
 
  function check(e)
 {
+  var phone=document.getElementById("phone");
+  phone.style.borderColor = "green";
     var no=e.which;
     if (no<48||no>57)
             return false
@@ -84,4 +86,27 @@ function jsonval()
 
 console.log(object);
 
+}
+
+function State(country)
+{
+  
+  var list = document.getElementById("state");
+  while (list.hasChildNodes()) 
+  {   
+    list.removeChild(list.firstChild);
+  }
+  if(country=="IN")
+      var x=["Kolkata"];
+  if(country=="US")
+      var x=["Alabama"];
+  document.getElementById("state").disabled=false;
+  for(i=0;i<x.length;i++)
+  {
+    var s=document.getElementById("state");
+    var option=document.createElement('option');
+    option.value=x[i];
+    option.label=x[i];
+    s.add(option);
+  }
 }

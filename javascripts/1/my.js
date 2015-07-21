@@ -39,4 +39,4 @@ function cursor(element){
 	if(element.setSelectionRange){
 		element.setSelectionRange(0,0);
 	}
-}
+} 

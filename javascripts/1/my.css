@@ -1,0 +1,23 @@
+.a-button,.s-button{
+	position: static;
+	border-radius: 8px;
+	height: ;
+	width: 15%;
+	font-size: 120%;
+}
+.a-button:hover,.s-button:hover{
+  border-color: #00CC99 ;
+  color: #00CC99;
+  cursor: pointer;
+}
+
+div{
+	margin:0% 0% 0% 0%;
+	padding: 0%;
+	text-align: right;
+}
+input{
+  height: auto;
+  width: 30%;
+  direction:rtl;
+}

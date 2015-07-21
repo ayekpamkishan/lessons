@@ -13,11 +13,11 @@
 
 div{
 	margin:0% 0% 0% 0%;
-	padding: 0%;
+	padding-top: 3%;
 	text-align: right;
 }
 input{
   height: auto;
-  width: 30%;
+  width: 90%;
   direction:rtl;
 }

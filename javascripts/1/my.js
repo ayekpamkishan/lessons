@@ -1,7 +1,6 @@
 function create(id) {
 	var maindiv=document.createElement("div");
 	maindiv.id="md";
-	maindiv.className="md";
 	document.getElementsByTagName("body")[0].appendChild(maindiv);
 	for(i=0;i<48;i++){
 		var sdivs=document.createElement('div');
@@ -29,11 +28,11 @@ function difference(id) {
 	r=a-b;
 	document.getElementById(id).innerHTML= a + "</br>" + "- " + b + "</br>" + "<input type=text id=s  onkeydown=cursor(this) onkeyup=validate("+r+",this.value,this)>";
 }
-function validate(sum,input,idd){
+function validate(sum,input,i){
 	if(sum==input)
-		idd.style.background="green";
+		i.style.background="green";
 	else
-		idd.style.background="red";
+		i.style.background="red";
 }
 function cursor(element){
 	if(element.setSelectionRange){

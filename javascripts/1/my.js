@@ -20,7 +20,7 @@ function add(id) {
 	var a=Math.round(99*Math.random());
 	var b=Math.round(99*Math.random());
 	r=a+b; 
-	document.getElementById(id).innerHTML= a + "</br>" + "+ " + b + "</br>" + "<input type=text id=a  onkeydown=cursor(this) onkeyup=validate("+r+",this.value,this)>";
+	document.getElementById(id).innerHTML= a + "</br>" + "+ " + b + "</br>" + "<input type=text id=a  onkeydown=cursor(this) onkeyup=validate("+r+",this)>";
 }
 function difference(id) {
 	var a=Math.round(99*Math.random());

@@ -2,7 +2,7 @@ var result=0;
 var flag =1;
 var operator = "";
 var temp;
-var memory;
+var memory=0;
 function press (n){
 
       if (flag==1) {
@@ -83,7 +83,7 @@ function clearscreen() {
     
 }
 function memoclean(){
-        memory=undefined;
+        memory=0;
 }
 function negate(){
       document.getElementById("output").value= document.getElementById("output").value* -1;

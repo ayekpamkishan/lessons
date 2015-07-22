@@ -3,60 +3,63 @@
     <head>
     <h3>Calculator</h3>
       <script type="text/javascript" src="wrk.js"></script>
+      <link rel="stylesheet" type="text/css" href="my.css">
     </head>
 <body>
     
-  <table>
+ 
+ <table class="b" border="10" width="198">
     <tr>
-        <td><input name="field" id="output" type="text" value="0"></td>
+        <td class="b"><input name="field" id="output" class="c" type="text" value="0"></td>
     </tr>
     </table>
-    <table>
-    <tr>    <td><input  type="button" value="MR" onclick="memo()"></td>
+    <table class="a">
+    <tr>    <td><input  type="button" class="a" value="MR" onclick="memo()"></td>
     </tr>
   <tr>
 
-    <td><input  type="button" value=" M+ " onclick="calc('m+')"></td>
-        <td><input  type="button" value="  M-  " onclick="calc('m-')"></td>
-        <td><input  type="button" value=" MC " onclick="memoclean()"></td>
-        <td><input  type="button" value=" +/- " onclick="negate()"></td>
+    <td><input  type="button" class="a" value=" M+ " onclick="calc('m+')"></td>
+        <td><input  type="button" class="a" value="  M-  " onclick="calc('m-')"></td>
+        <td><input  type="button" class="a"  value=" MC " onclick="memoclean()"></td>
+        <td><input  type="button" class="a" value=" +/- " onclick="negate()"></td>
   </tr>
   <tr>
-      <td><input  type="button" value="CLS" onclick="clearscreen()"></td>
-      <td><input  type="button" value="CAN " onclick="clearscreen()"></td>
-      <td><input  type="button" value="REM" onclick="calc('%')"></td>
-      <td><input  type="button" value="  % " onclick="calc('% of')"></td>
+      <td><input  type="button" class="a" value="CLS" onclick="clearscreen()"></td>
+      <td><input  type="button" class="a" value="CAN " onclick="clearscreen()"></td>
+      <td><input  type="button" class="a" value="REM" onclick="calc('%')"></td>
+      <td><input  type="button" class="a" value="  % " onclick="calc('% of')"></td>
   </tr>
 
   <tr>
-    <td><input  type="button" value="  7   " onclick="press(7)"></td>
-    <td><input  type="button" value="   8   " onclick="press(8)"></td>        
-    <td><input  type="button" value="   9   " onclick="press(9)"></td>
-    <td><input  type="button" value="  +  " onclick="calc('+')"></td>
+    <td><input  type="button" class="a" value="  7   " onclick="press(7)"></td>
+    <td><input  type="button" class="a" value="   8   " onclick="press(8)"></td>        
+    <td><input  type="button" class="a" value="   9   " onclick="press(9)"></td>
+    <td><input  type="button" class="a" value="  +  " onclick="calc('+')"></td>
+    
+  </tr>
+  <tr> 
+    <td><input  type="button" class="a" value="  4   " onclick="press(4)"></td>
+    <td><input  type="button" class="a" value="   5   "onclick="press(5)"></td>        
+    <td><input  type="button" class="a" value="   6   " onclick="press(6)"></td>
+    <td><input  type="button" class="a" value="  -   " onclick="calc('-')"></td>
+    
     
   </tr>
   <tr>
-    <td><input  type="button" value="  4   " onclick="press(4)"></td>
-    <td><input  type="button" value="   5   "onclick="press(5)"></td>        
-    <td><input  type="button" value="   6   " onclick="press(6)"></td>
-    <td><input  type="button" value="  -   " onclick="calc('-')"></td>
-    
-    
-  </tr>
-  <tr>
-    <td><input  type="button" value="  1   " onclick="press(1)"></td>
-    <td><input  type="button" value="   2   " onclick="press(2)"></td>        
-    <td><input  type="button" value="   3   " onclick="press(3)"></td>
-    <td><input  type="button" value="   *  " onclick="calc('*')"></td>
+    <td><input  type="button" class="a" value="  1   " onclick="press(1)"></td>
+    <td><input  type="button" class="a" value="   2   " onclick="press(2)"></td>        
+    <td><input  type="button" class="a" value="   3   " onclick="press(3)"></td>
+    <td><input  type="button" class="a" value="   *  " onclick="calc('*')"></td>
     
   </tr>
   <tr>
-        <td><input  type="button" value="    .  " onclick="press('.')"> </td> 
-        <td><input  type="button" value="   0   " onclick="press(0)"></td>
-        <td><input  type="button" value="   =   " onclick="calc('=')"></td>
-        <td><input  type="button" value="   /   " onclick="calc('/')"></td>
+        <td><input  type="button" class="a" value="    .  " onclick="press('.')"> </td> 
+        <td><input  type="button" class="a" value="   0   " onclick="press(0)"></td>
+        <td><input  type="button" class="a" value="   =   " onclick="calc('=')"></td>
+        <td><input  type="button" class="a" value="   /   " onclick="calc('/')"></td>
   </tr>
 </table>
+
 
 </body>
 

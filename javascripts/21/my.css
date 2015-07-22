@@ -1,0 +1,28 @@
+div{
+	
+}
+table{
+    
+    
+}
+tr{
+	
+}
+.a{
+
+	border-color: none;
+	background-color: green;
+}
+.b{
+	
+	border-color: green;
+	background-color: green;
+}
+
+.c{
+	border-color: transparent;
+	background-color: white;
+	border-style: none;
+	width: 100%;
+
+}

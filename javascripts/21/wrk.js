@@ -72,7 +72,7 @@ function calc(op) {
       memory=result;
         
   }
-  flag=true;
+  flag=1;
 }
 function memo(){
     document.getElementById("output").value=memory;
@@ -80,7 +80,7 @@ function memo(){
 }
 function clearscreen() {
     document.getElementById("output").value=" ";
-    operator=" ";
+    
 }
 function memoclean(){
         memory=undefined;

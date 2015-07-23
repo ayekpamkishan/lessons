@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <h3>Date and Time Calculator</h3>
+    <h1>Date and Time Calculator</h1>
       <script type="text/javascript" src="date.js"></script>
       <link rel="stylesheet" type="text/css" href="date.css">
     </head>
 <body>
     
  
- <table>
+ <table style="width:60%">
+
+    <tr>
+    <th colspan="3">Start Time</th>
+    <th colspan="3">End Time</th>
+    <th colspan="3"> Time Difference</th>
+  </tr>
+
+
     <tr> <p>Enter a Start time and an End time</p>
             <td><input type="number" id="shr" class="c" name="hr" min="0" max="24" placeholder="hr"></td>
         <td><input type="number" id="smin" class="c" name="hr" min="0" max="60" placeholder="min"></td>
@@ -17,16 +25,24 @@
         <td><input type="number" id="ehr" class="c" name="hr" min="0" max="24" placeholder="hr"></td>
         <td><input type="number" id="emin" class="c" name="hr" min="0" max="60" placeholder="min"></td>
         <td><input type="number" id="esec" class="c" name="hr" min="0" max="60" placeholder="sec"></td>
+
+        <td><input type="text" id="rhr" class="dd" ></td>
+        <td><input type="text" id="rmin" class="dd"></td>
+        <td><input type="text" id="rsec" class="dd"></td>
     </tr>
-    <tr>
-        <td><input type="number" id="rhr" class="c" min="0" max="60"></td>
-        <td><input type="number" id="rmin" class="c" min="0" max="60"></td>
-        <td><input type="number" id="rsec" class="c" min="0" max="60"></td>
+    <tr>dd
+        
     </tr>
     </table>
     <button type="submit" onclick="timediff()">Calculate difference</button>
 
-    <table cellspacing="5" id="ttt">
+    <table style="width:60%" cellspacing="5" class="dat">
+    <col class="coll" />
+    <tr>
+    <th colspan="3">Start Date</th>
+    <th colspan="3">End Date</th>
+    <th colspan="3"> Date Difference</th>
+  </tr>
 
     <tr><p>Enter a Start Date and an End Date</p>
       
@@ -36,12 +52,14 @@
         <td><input type="text" id="d2" class="d" placeholder="dd"></td>
         <td><input type="text" id="m2" class="d"  placeholder="mm"></td>
         <td ><input type="text" id="y2" class="d"  placeholder="yyyy"></td>
-    
-    </tr>
-    <tr>
+
         <td><input type="text" id="d3" class="d"></td>
         <td><input type="text" id="m3" class="d" ></td>
         <td><input type="text" id="y3" class="d" ></td>
+    
+    </tr>
+    <tr>
+        
 
     </tr>
     </table>

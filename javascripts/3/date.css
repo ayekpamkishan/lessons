@@ -1,12 +1,21 @@
-/*.d{
-	width:100%;
-}*/
-.td{
-	width: 15%;
+.d{
+	width:95%;
 }
-#ttt{
+.dd{
+	width:96%;
+}
+
+/*#ttt{
 	width=30%;
+}*/
+
+table, th, td {
+    border: 1px solid blue;
+    border-collapse: collapse;
 }
-.td{
-	width=2%;
+/*table.dat{
+	width: 50%;
 }
+col.dat{
+	width: 1%;
+}*/

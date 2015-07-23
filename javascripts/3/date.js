@@ -24,10 +24,10 @@ function timediff () {
 		h=eh-sh;
 	else
 		h=(eh-sh)+24;
-	document.getElementById('rsec').value=s+"c";
+	document.getElementById('rsec').value=s+" sec";
 	
-	document.getElementById('rmin').value=m+"b";
-	document.getElementById('rhr').value=h+"a";
+	document.getElementById('rmin').value=m+" min";
+	document.getElementById('rhr').value=h+" hr";
 	
 	
 }

@@ -65,3 +65,24 @@ function caldate(){
 	document.getElementById('y3').value=y+" years";
 
 }
+function dayplus(){
+	var d=parseInt(document.getElementById('dd1').value);
+	var m=parseInt(document.getElementById('mm1').value);
+	var y=parseInt(document.getElementById('yy1').value);
+	var d1=parseInt(document.getElementById('dd2').value);
+	d+=d1;
+	while(d>30)
+	{
+		m++;
+		d-=30;
+	}
+	while(m>12)
+	{
+		y++;
+		m-=12;
+	}
+
+	document.getElementById('dd3').value=d;
+	document.getElementById('mm3').value=m;
+	document.getElementById('yy3').value=y;
+}

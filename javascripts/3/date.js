@@ -86,3 +86,43 @@ function dayplus(){
 	document.getElementById('mm3').value=m;
 	document.getElementById('yy3').value=y;
 }
+function timeadd() {
+	var hh= parseInt(document.getElementById('h1').value);
+	var mm= parseInt(document.getElementById('mmm1').value);
+	var ss= parseInt(document.getElementById('s1').value);
+	var hhh= parseInt(document.getElementById('h2').value);
+	var mmm= parseInt(document.getElementById('mmm2').value);
+	var sss= parseInt(document.getElementById('s2').value);
+	var s,m,h;
+	while(hhh>24)
+	{
+		hhh-=24
+	}
+	s=ss+sss;
+	m=mm+mmm;
+	h=hh+hhh;
+	alert(h);
+	alert(m);
+	alert(s);
+
+	if(s>=60)
+	{
+		m++;
+		s-=60;
+	}
+	if(m>=60)
+	{
+		h++;
+		m-=60;
+	}
+	if(h>=24)
+		h=(h%24);
+	alert(h);
+	alert(m);
+	alert(s);
+	document.getElementById('h3').value=h+" hr";
+	document.getElementById('mmm3').value=m+" min";
+	document.getElementById('s3').value=s+" sec";
+	
+	
+}

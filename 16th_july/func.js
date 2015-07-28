@@ -31,7 +31,7 @@ function tab1()
   phone.style.borderColor ="transparent";
     var no=e.which;
     if (no<48||no>57)
-            return false
+            return false;
     
 }
 function validno()
@@ -90,16 +90,18 @@ console.log(object);
 
 function State(country)
 {
-  
+  var x;
   var list = document.getElementById("state");
   while (list.hasChildNodes()) 
   {   
     list.removeChild(list.firstChild);
   }
-  if(country=="IN")
-      var x=["Kolkata"];
-  if(country=="US")
-      var x=["Alabama"];
+  if(country=="IN"){
+     x=["Kolkata"];
+  }
+  if(country=="US"){
+       x=["Alabama"];
+  }
   document.getElementById("state").disabled=false;
   for(i=0;i<x.length;i++)
   {

@@ -96,7 +96,7 @@ function timeadd() {
 	var s,m,h;
 	while(hhh>24)
 	{
-		hhh-=24
+		hhh-=24;
 	}
 	s=ss+sss;
 	m=mm+mmm;

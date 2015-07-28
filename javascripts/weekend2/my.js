@@ -30,7 +30,7 @@ createElement("input", maindiv, {id: "radio2",type: "radio",name:'cname'}, {}, {
 
 createElement("input", maindiv, {id: "radio3",type: "radio",name:'cname'}, {}, {click: function (){clearDiv(); mort();}}, "Kishan");
 
-
+var pl,i;
  function basic(){
  		var label=[['MC','M-','M+','MR'],['%','(+ / -)','REM','CLS'],
  		['+','9','8','7'],['-','6','5','4'],
@@ -183,12 +183,12 @@ function dt(){
 				for (var j = 0; j < 3; j++) 
 				{
 						
-						if(j==0)
-							var pl="sec";
+						if(j===0)
+							pl="sec";
 						else if(j==1)
-							var pl="min";
+							pl="min";
 						else
-							var pl="hr";
+							pl="hr";
 						createElement("input", row.insertCell(0), {placeholder:pl, id:id[i][j]}, {width:"100%"}, {},null);
 
 				}
@@ -198,56 +198,56 @@ function dt(){
 			}
 			createElement("button", table.insertRow(i).insertCell(0), {}, {width:"100%"}, {click:function(){timediff();}},"Calculate");//END OF TIME DIFFERENCE
 
-			var text=['Start Time','Duration','Added time'];//TIME ADD
-			var id=[['s11','m11','h11'],['s22','m22','h22'],['s33','m33','h33'],];
+			var txt=['Start Time','Duration','Added time'];//TIME ADD
+			var idd=[['s11','m11','h11'],['s22','m22','h22'],['s33','m33','h33'],];
 			createElement("p",dateDiv,{},{color: '#0000FF'},{},"ENTER A START TIME AND A TIME DURATION");
 			table=createElement('table',dateDiv,{id:'dateTable'},{backgroundColor: "grey"},null);	
 					table.cellSpacing=10;
-			for(var i=0;i<3;i++)
+			for(i=0;i<3;i++)
 			{
 				row=table.insertRow(i);
 				
-				for (var j = 0; j < 3; j++) 
+				for (var k = 0; k < 3; k++) 
 				{
 						
-						if(j==0)
-							var pl="sec";
-						else if(j==1)
-							var pl="min";
+						if(k===0)
+							pl="sec";
+						else if(k==1)
+							pl="min";
 						else
-							var pl="hr";
-						createElement("input", row.insertCell(0), {placeholder:pl, id:id[i][j]}, {width:"100%"}, {},null);
+							pl="hr";
+						createElement("input", row.insertCell(0), {placeholder:pl, id:idd[i][k]}, {width:"100%"}, {},null);
 
 				}
 				span= createElement('span',row.insertCell(0),{},{},null);
-				span.appendChild( document.createTextNode(text[i]),null);
+				span.appendChild( document.createTextNode(txt[i]),null);
 				
 			}
 			createElement("button", table.insertRow(i).insertCell(0), {}, {width:"100%"}, {click:function(){timeadd();}},"Calculate");//END OF TIME ADD
 
-			var text=['Start Date','End Date','Days Within'];//DATE DIFFERENCE
-			var id=[['year1','month1','date1'],['year2','month2','date2'],['year3','month3','date3'],];
+			var tex=['Start Date','End Date','Days Within'];//DATE DIFFERENCE
+			var iid=[['year1','month1','date1'],['year2','month2','date2'],['year3','month3','date3'],];
 			createElement("p",dateDiv,{},{color: '#0000FF'},{},"ENTER A START DATE AND AN END DATE");
 			table=createElement('table',dateDiv,{id:'dateTable'},{backgroundColor: "grey"},null);	
 					table.cellSpacing=10;
-			for(var i=0;i<3;i++)
+			for(i=0;i<3;i++)
 			{
 				row=table.insertRow(i);
 				
-				for (var j = 0; j < 3; j++) 
+				for (var l = 0; l < 3; l++) 
 				{
 						
-						if(j==0)
-							var pl="yyyy";
-						else if(j==1)
-							var pl="mm";
+						if(l===0)
+							pl="yyyy";
+						else if(l==1)
+							pl="mm";
 						else
-							var pl="dd";
-						createElement("input", row.insertCell(0), {placeholder:pl, id:id[i][j]}, {width:"100%"}, {},null);
+							pl="dd";
+						createElement("input", row.insertCell(0), {placeholder:pl, id:iid[i][l]}, {width:"100%"}, {},null);
 
 				}
 				span= createElement('span',row.insertCell(0),{},{},null);
-				span.appendChild( document.createTextNode(text[i]),null);
+				span.appendChild( document.createTextNode(tex[i]),null);
 				
 			}
 			createElement("button", table.insertRow(i).insertCell(0), {}, {width:"100%"}, {click:function(){caldate();}},"Calculate");//END OF DATE DIFFERENCE
@@ -297,7 +297,7 @@ function timeadd() {
 	var s,m,h;
 	while(hhh>24)
 	{
-		hhh-=24
+		hhh-=24;
 	}
 	s=ss+sss;
 	m=mm+mmm;

@@ -1,3 +1,4 @@
+body {margin: 0px;}
 .pdetail{
 	position:fixed;
     width: 30%;
@@ -21,8 +22,8 @@ img{
     left:0%;
 }
 img.avatar{
-  height: 35%;
-  width: 30%;
+  height: 37%;
+  width: 29%;
   right: 0%;
   border-radius: 70%;
 }
@@ -80,7 +81,7 @@ img.mail{
 }
 .para1{
 	position: absolute;
-	top:16% ;
+	top:6% ;
 	left: ;
 	width: ;
 	text-align: justify;

@@ -1,0 +1,267 @@
+@font-face {
+        font-family: OpenSans-Semibold;
+        src: url(font/OpenSans-Semibold.ttf);
+  }
+
+  @font-face {
+        font-family: OpenSans-Regular;
+        src: url(font/OpenSans-Regular.ttf);
+  }
+
+*{font-family: OpenSans-Regular;}
+*{ 
+    -moz-box-sizing: border-box; 
+      -webkit-box-sizing: border-box; 
+      box-sizing: border-box; 
+  }
+  .error{
+    color: red;
+    font-size: 12px;
+  }
+  .err{
+    position: absolute;
+    top: 16%;
+    right: 4%;
+    height:100px;
+    width: 150px;
+  }
+  .success{
+    color: green;
+    position: absolute;
+    top: 65%;
+    left: -370%;
+    width: 350%;
+  }
+  .h3{
+      position: absolute;
+      top: 8%;
+      left: 2.5%;
+    }
+  .h1{
+  position: absolute;
+  max-width: 100%;
+  top: 2%;
+  left: -2%;
+  padding-left: 8%;
+    }
+    .h2{
+  position: absolute;
+  max-width:100% ;
+  top:3%;
+  left: 6%;
+  padding-left:;
+    }
+    
+
+.relative {
+            position: relative;
+            border-radius: 5px;
+            background-color: #E5EFFF;
+            top: 100px;
+            max-width: 800px;
+            height: 400px;
+            border-color: #99CCFF;
+            border-style: solid;
+            border-width: 1px;
+            margin: auto;
+          }
+.absoluteLeft {
+            position: absolute;
+            border-radius: 5px;
+            background-color: white;
+            top: 7%;
+            left: 3%;
+            height: 80%;
+            width: 45%;
+            padding: 10px;
+            border-color: #99CCFF;
+            border-style: solid;
+            border-width: 1px;
+          }
+.absoluteRight {
+            position: absolute;
+            border-radius: 5px;
+            background-color: white;
+            top: 7%;
+            right: 3%;
+            width: 45%;
+            height: 80%;
+            padding: 3%;
+            border-color: #99CCFF;
+            border-style: solid;
+            border-width: 1px;
+          }
+          .p1{
+            position: absolute;
+            padding-top: 9%;
+          }
+.tc1      {
+            font-color: blue;
+            position: absolute;
+            top: -9%;
+            left: 3%;
+            border-radius: 1px;
+            background-color: #E5EFFF;
+            height: 9%;
+            width: 15%;
+            padding: 5px;
+            border-top-color:#99CCFF ;
+            border-left-color:#99CCFF ;
+            border-right-color: #99CCFF;
+            border-bottom-color: #E5EFFF;
+            border-style: solid;
+            border-width: 1px;
+            z-index: 1;
+            cursor: pointer;
+            color: blue;
+          }
+.tc2      {
+            position: absolute;
+            top: -9%;
+            left: 18.3%;
+            border-radius: 1px;
+            background-color: ;
+            height: 9%;
+            width: 15%;
+            padding: 5px;
+            border-top-color:#99CCFF ;
+            border-left-color:#99CCFF ;
+            border-right-color: #99CCFF;
+            border-bottom-color: #E5EFFF;
+            border-style: solid;
+            border-width: 1px;
+            margin: auto;
+            z-index: 1;
+            cursor: pointer;
+          }
+img       {
+            position: absolute;
+            width: 87%;
+            height: ;
+            top: 30%;
+    
+          }
+.form1    {
+      position: absolute;
+      display:none;
+      border-radius: 5px;
+      background-color: white;
+      top: 7%;
+      left: 3%;
+      right:3%;
+      height: 80%;
+      width: 94%;
+      padding: 15px 15px 15px 15px;
+      border-color: #99CCFF;
+      border-style: solid;
+      border-width: 1px;
+    }
+    
+    .formleft    {
+      position: absolute;
+      display:;
+      background-color: none;
+      top: 15%;
+      left: -1.1%;
+      right:;
+      height: 80%;
+      width: 50%;
+      padding: 18px 15px 15px 15px;
+      border-color: #99CCFF;
+      border-style: ;
+      border-width: ;
+    }
+    .formright  {
+      position: absolute;
+      display:;
+      background-color: none;
+      top: 14.6%;
+      right: -1.5%;
+      height: 80%;
+      width: 50%;
+      padding: 15px 15px 15px 15px;
+      border-color: #99CCFF;
+      border-style:;
+      border-width: ;
+    }
+    .label{
+      font-size: 14px;
+    }
+    .tarea{
+      width: 100%;
+    }
+    
+    .inter{
+      font-size: 14px;
+    }
+    .l-button {
+      position: absolute;
+      border-radius: 3px;
+      background: #25970E;
+      text-decoration: none;
+      bottom: 6%;
+      left: 14%;
+      width: 20%;
+      height: 15%;
+      padding: 2%;
+      color: white;
+      cursor: pointer;
+      display: block;
+      border:none;
+      font-size:17px;
+    }
+    .s-button
+    {
+      position: absolute;
+      border-radius: 3px;
+      border: none;
+      background: #25970E;
+      text-decoration: none;
+      bottom: 6%;
+      right: 6%;
+      width: 20%;
+      height: 15%;
+      padding: 2%;
+      color: white;
+      cursor: pointer;
+      display: none;
+      font-size:17px;
+      z-index: 2;
+    }
+    .r-button
+    {
+      position: absolute;
+      border-radius: 3px;
+      border: none;
+      background: #25970E;
+      text-decoration: none;
+      bottom: 6%;
+      right: 30%;
+      width: 20%;
+      height: 15%;
+      padding: 2%;
+      color: red;
+      cursor: pointer;
+      display: none;
+      font-size:17px;
+      z-index: 2;
+    }
+
+    #ps{
+      color: #6699FF;
+    }
+    
+    input, select, textarea {
+      background-color : #E8E8E8;
+      border:1px solid #E0E0E0;
+    }
+    .fsize{
+      width: 245px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+
+
+
+    

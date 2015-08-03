@@ -13,6 +13,7 @@ $nameErr = $emailErr = $mobileErr = $genderErr =$interestErr = $countryErr = $st
 $name = $email = $mobile = $gender = $country = $state = $address =$smsg= "";
 $mob="/^[789][0-9]{9}$/";
 $interest = [];
+$intereststr="";
 $flag=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") { $flag=1;
 if (empty($_POST["name"])) {
@@ -95,6 +96,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "kishan";
+$intereststr=implode(",",$interest);
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -103,23 +105,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$detail = "INSERT INTO subscription (NAME, EMAIL, MOBILE, SEX, COUNTRY, STATE, ADDRESS)
-VALUES ('$name', '$email', '$mobile', '$gender', '$country', '$state', '$address')";
+$detail = "INSERT INTO subscription (NAME, EMAIL, MOBILE, SEX, INTEREST, COUNTRY, STATE, ADDRESS)
+VALUES ('$name', '$email', '$mobile', '$gender', '$intereststr', '$country', '$state', '$address')";
 
 
 
 if (mysqli_query($conn, $detail)) {
-    foreach($interest as $value){
-  if($value){
-    $hobby = "INSERT INTO hobbies (MOBILE, INTEREST)
-    VALUES ('$mobile', '$value')";
-    mysqli_query($conn, $hobby);
-  }
-    
-}
-
     echo "New record created successfully";
-} else {
+} 
+else {
     echo "Error: " . $detail . "<br>" . mysqli_error($conn);
 }
 
@@ -285,7 +279,6 @@ mysqli_close($conn);
          <span class="error"><?php echo $state;?></span><br>
           <span class="error"><?php echo $address;?></span><br> -->
             <span class="success"><?php echo $smsg;?></span>
-            <span class="error"><?php echo $mobile;?></span><br>
             <br>
         </div>
 </body>

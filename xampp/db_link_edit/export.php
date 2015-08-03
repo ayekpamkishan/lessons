@@ -33,7 +33,7 @@ $selectSQL = 'SELECT * FROM `subscription`';
      <th>EMAIL</th>
      <th>MOBILE</th>
      <th>SEX</th>
-
+     <th>INTEREST</th>
      <th>COUNTRY</th>
      <th>STATE</th>
      <th>ADDRESS</th>
@@ -52,6 +52,7 @@ $selectSQL = 'SELECT * FROM `subscription`';
          <td>{$row['EMAIL']}</td>
          <td>{$row['MOBILE']}</td>
          <td>{$row['SEX']}</td>
+         <td>{$row['INTEREST']}</td>
          <td>{$row['COUNTRY']}</td>
          <td>{$row['STATE']}</td>
          <td>{$row['ADDRESS']}</td>

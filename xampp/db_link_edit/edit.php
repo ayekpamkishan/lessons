@@ -96,6 +96,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "kishan";
+$intereststr=implode(",",$interest);
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -104,19 +105,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$detail = "UPDATE  subscription set NAME='$name',EMAIL='$email',MOBILE='$mobile',SEX='$gender',COUNTRY='$country',STATE='$state',ADDRESS='$address' where MOBILE='$id1'";
+$detail = "UPDATE  subscription set NAME='$name',EMAIL='$email',MOBILE='$mobile',SEX='$gender', INTEREST='$intereststr',COUNTRY='$country',STATE='$state',ADDRESS='$address' where MOBILE='$id1'";
 
 
 if (mysqli_query($conn, $detail)) {
-    foreach($interest as $value){
-  if($value){
-    $hobby = "INSERT INTO hobbies (MOBILE, INTEREST)
-    VALUES ('$mobile', '$value')";
-    mysqli_query($conn, $hobby);
-  }
-    
-}
-
     echo "UPDATED successfully";
 } else {
     echo "Error: " . $detail . "<br>" . mysqli_error($conn);
@@ -141,6 +133,8 @@ if (!$conn) {
         $column = "SELECT * FROM subscription where MOBILE='$id1'";
         $data = mysqli_query($conn,$column);
         $row = mysqli_fetch_array($data);
+        $inerestArr=array();
+        $inerestArr=explode(",",$row['INTEREST']);
         mysqli_close($conn);
 
         ?>
@@ -187,11 +181,11 @@ if (!$conn) {
                                     <td><span class="label">Interest<span class="error">*</span></span>
                                     </td>
                                     <td>
-                                        <input type="checkbox" name="interest[]" class="inter" <?php foreach($interest as $value){ if($value=='Football' ) echo "checked"; } ?> value="Football" ><span class="label">Football</span>
+                                        <input type="checkbox" name="interest[]" class="inter" <?php if(in_array( "Football",$inerestArr)) echo "checked='checked'"; ?> value="Football" ><span class="label">Football</span>
 
-                                        <input type="checkbox" name="interest[]" <?php foreach($interest as $value){ if($value=='Movie' ) echo "checked"; } ?> value="Movie"class="inter"><span class="label">Movie</span>
+                                        <input type="checkbox" name="interest[]" <?php if(in_array( "Movie",$inerestArr)) echo "checked='checked'"; ?> value="Movie"class="inter"><span class="label">Movie</span>
 
-                                        <input type="checkbox" name="interest[]" <?php foreach($interest as $value){ if($value=='Reading' ) echo "checked"; } ?> value="Reading" class="inter"><span class="label">Reading
+                                        <input type="checkbox" name="interest[]" <?php if(in_array( "Reading",$inerestArr)) echo "checked='checked'"; ?> value="Reading" class="inter"><span class="label">Reading
                   </span>
                                     </td>
                                 </tr>

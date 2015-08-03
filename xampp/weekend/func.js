@@ -1,4 +1,4 @@
-function ajax() {
+function ajax(id) {
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
     } else { // code for IE6, IE5
@@ -8,17 +8,17 @@ function ajax() {
     var email = document.getElementById("email").value;
     var mobile = document.getElementById("phone").value;
     var sex = document.getElementsByName("sex");
-    if(sex[0].checked)
-        sex="male";
-    if(sex[1].checked)
-        sex="female";
+    if (sex[0].checked)
+        sex = "male";
+    if (sex[1].checked)
+        sex = "female";
     var hobby = document.getElementsByName("interest[]");
-    var  interest = "";
-       for (var i = 0, n = hobby.length; i < n; i++) {
-           if (hobby[i].checked) {
-               interest += hobby[i].value + ",";
-           }
-       }
+    var interest = "";
+    for (var i = 0, n = hobby.length; i < n; i++) {
+        if (hobby[i].checked) {
+            interest += hobby[i].value + ",";
+        }
+    }
 
     var country = document.getElementById("country").value;
     var state = document.getElementById("state").value;
@@ -28,8 +28,30 @@ function ajax() {
             document.getElementById("errormsg").innerHTML = xmlhttp.responseText;
         }
     }
-    var parameters = "name=" + name + "&email=" + email+ "&mobile=" + mobile + "&sex=" + sex + "&interest=" + interest + "&country=" + country + "&state=" + state  + "&address=" + address;
-    xmlhttp.open("POST", "validate.php", true);
+    var parameters = "name=" + name + "&email=" + email + "&mobile=" + mobile + "&sex=" + sex + "&interest=" + interest + "&country=" + country + "&state=" + state + "&address=" + address;
+    if (id == 'subscribe') {
+        xmlhttp.open("POST", "validate.php", true);
+    } else {
+        xmlhttp.open("POST", "update.php", true);
+    }
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send(parameters);
+}
+
+function remov(id) {
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+
+    } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.body.innerHTML = xmlhttp.responseText;
+        }
+    }
+    var parameters = 'id=' + id;
+    xmlhttp.open("POST", "delete.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(parameters);
 }
@@ -83,9 +105,3 @@ function State(country) {
         s.add(option);
     }
 }
-
-
-
-
-
-

@@ -1,15 +1,17 @@
 <html>
+
 <head>
-  <style type="text/css">
-table {
-    border-collapse: collapse;
-}
-</style>
-<script type='text/javascript' src="func.js"></script>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+    <script type='text/javascript' src="func.js"></script>
 </head>
+
 <body>
 
-<?php 
+    <?php 
 
 $servername = "localhost";
 $username = "root";
@@ -27,23 +29,23 @@ $selectSQL = 'SELECT * FROM `subscriptionTable`';
    echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
  }else{
    ?>
-<table border>
- <thead>
-   <tr>
-     <th>NAME</th>
-     <th>EMAIL</th>
-     <th>MOBILE</th>
-     <th>SEX</th>
-    <th>INTEREST</th>
-     <th>COUNTRY</th>
-     <th>STATE</th>
-     <th>ADDRESS</th>
-     <th>DELETE</th>
-     <th>EDIT</th>
-   </tr>
- </thead>
- <tbody>
-   <?php
+        <table border>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>MOBILE</th>
+                    <th>SEX</th>
+                    <th>INTEREST</th>
+                    <th>COUNTRY</th>
+                    <th>STATE</th>
+                    <th>ADDRESS</th>
+                    <th>DELETE</th>
+                    <th>EDIT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
      if( mysqli_num_rows( $data )==0 ){
        echo '<tr><td colspan="4">No Rows Returned</td></tr>';
      }else{
@@ -63,14 +65,15 @@ $selectSQL = 'SELECT * FROM `subscriptionTable`';
        }
      }
    ?>
- </tbody>
-</table>
+            </tbody>
+        </table>
 
-  <?php
+        <?php
  }
 ?>
-<div id='errormsg'>
-  
-</div>
+            <div id='errormsg'>
+
+            </div>
 </body>
+
 </html>

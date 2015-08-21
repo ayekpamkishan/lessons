@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="raphael.js"></script>
+    <script type="text/javascript" src="beta.js"></script>
+</head>
+
+<body>
+    <script>
+        (function() {
+            var paperWidth=400, paperHeight=900;
+            var paper = Raphael(700, 50, paperWidth, paperHeight);
+            categorize();
+            circle();
+
+
+            function categorize() {
+                for (i = 0; i < json.length; i++) {
+                    if (json[i].text.match(/(cricket|football|game|volleyball|basketball|kabaddi|world cup)/i)) {
+                        json[i].category = "sport";
+                    } else if (json[i].text.match(/kbc/i)) {
+                        json[i].category = "kbc";
+                    } else if (json[i].text.match(/(cinema|movie|film|trailer|song|shamitabh)/i)) {
+                        json[i].category = "cinema";
+                    } else if (json[i].text.match(/india|bharat|mumbai/i)) {
+                        json[i].category = "india";
+                    } else if (json[i].text.match(/(family|parivar)/i)) {
+                        json[i].category = "family";
+                    } else if (json[i].text.match(/(peace|happiness|love|fun|great|fantastic|wonderful|incredible|brilliant)/i)) {
+                        json[i].category = "affection";
+                    }
+                }
+            }
+
+            function circle() {
+                var count = 0, radius = 10, cy = -10, cx, color;
+
+                do{
+
+                    cy = cy + 20;
+                    cx = -10;
+                    while(cx<paperWidth) {//insert circle within the paper width
+
+                        cx = cx + 20;
+                        if (count < json.length) {
+                            switch (json[count].category) {
+                                case "sport":
+                                    color = "pink";
+                                    break;
+                                case "kbc":
+                                    color = "orange";
+                                    break;
+                                case "cinema":
+                                    color = "red";
+                                    break;
+                                case "india":
+                                    color = "brown";
+                                    break;
+                                case "family":
+                                    color = "green";
+                                    break;
+                                case "affection":
+                                    color = "blue";
+                                    break;
+                                default:
+                                    color= "grey";
+                            }
+                            paper.circle(cx, cy, radius).attr({fill: color,stroke: 'none',title: json[count].text});
+                            console.log(count);
+                        }
+                        count++;
+                    }
+                }while(count<json.length)
+                console.log(count);
+            }
+
+
+        })();
+    </script>
+    <div style="width: 40%">
+        <h1 style="color:#045a8d">
+            <a href="index.html">@SrBachchan</a>
+        </h1>
+        <h3> What does Amitabh Bachchan Tweet About? </h3>
+            <p>Each bubble is a tweet, the color portrays the theme and the size shows the number of times it has been retweeted. Tweets shown here are from June 2014 onward.</p>
+        <h3 style="color: red">Cinema</h3>
+            <p>Movies of course !</p>
+        <h3 style="color: pink">Sport</h3>
+            <p>A huge fan of sport. Follows Cricket and Football passionately.</p>
+        <h3 style="color: green">Family</h3>
+            <p>Talks about family occasionally.</p>
+        <h3 style="color: orange">KBC</h3>
+            <p>Moments of intrigue in Kaun Banega Crorepati.</p>
+        <h3 style="color:brown">India</h3>
+            <p>A proud Indian, Amitabh doesn't hold back his patriotism on twitter. A big 'Mumbai Indian' fan too !</p>
+        <h3 style="color: blue">Affection</h3>
+            <p>Amitabh is a happy man and tweets about 'peace', 'happiness', 'love', 'fun' and anything that is 'great', 'fantastic', 'wonderful', 'incredible' and 'brilliant' !</p>
+        <h3 style="color: grey">Everything !</h3>
+            <p>Quotes, expressions of sadness & delight - Amitabh tweets them all !</p>
+
+
+
+    </div>
+</body>
+
+</html>

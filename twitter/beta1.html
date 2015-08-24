@@ -10,8 +10,18 @@
 <body>
     <script>
         (function() {
-            var paperWidth=400, paperHeight=900;
-            var paper = Raphael(700, 50, paperWidth, paperHeight);
+            var Width = 550,
+                Height = 550,
+                x=20,
+                y=20,
+                cx = (Height-x)/2,
+                cy = (Width-y)/2,
+                r = 0,
+                angle = 0,
+                count = 0,
+                radius = 8,
+                diameter = 16;
+            var paper = Raphael(x, y, Width, Height);
             categorize();
             circle();
 
@@ -35,51 +45,59 @@
             }
 
             function circle() {
-                var count = 0, radius = 10, cy = -10, cx, color;
-
-                do{
-
-                    cy = cy + 20;
-                    cx = -10;
-                    while(cx<paperWidth) {//insert circle within the paper width
-
-                        cx = cx + 20;
+                // paper.circle(cx, cy, radius).attr({
+                //     fill: "white"
+                // });
+                r = 0, angle = 0;
+                for (var j = 1; count < json.length; j++) {
+                    for (var i = 0, r = r + diameter; i < 6 * j; i++) {
+                        x = cx + r * Math.cos(angle);
+                        y = cy + r * Math.sin(angle);
                         if (count < json.length) {
-                            switch (json[count].category) {
-                                case "sport":
-                                    color = "pink";
-                                    break;
-                                case "kbc":
-                                    color = "orange";
-                                    break;
-                                case "cinema":
-                                    color = "red";
-                                    break;
-                                case "india":
-                                    color = "brown";
-                                    break;
-                                case "family":
-                                    color = "green";
-                                    break;
-                                case "affection":
-                                    color = "blue";
-                                    break;
-                                default:
-                                    color= "grey";
-                            }
-                            paper.circle(cx, cy, radius).attr({fill: color,stroke: 'none',title: json[count].text});
-                            console.log(count);
+                        switch (json[count].category) {
+                            case "sport":
+                                color = "pink";
+                                break;
+                            case "kbc":
+                                color = "orange";
+                                break;
+                            case "cinema":
+                                color = "red";
+                                break;
+                            case "india":
+                                color = "brown";
+                                break;
+                            case "family":
+                                color = "green";
+                                break;
+                            case "affection":
+                                color = "blue";
+                                break;
+                            default:
+                                color = "grey";
                         }
+                        radius=(json[count].retweet_count)/50;
+                        if(radius>5){ radius=8;}
+                            paper.circle(x, y, radius).attr({
+                                fill: color,
+                                stroke: 'none',
+                                title: json[count].text
+                            });
+                        }
+                        //circle1.animate({cx:x,cy:y,r:10,fill: "blue"}, 2000);
+                        // console.log("xCos = " + Math.cos(angle) + "\nySin = " +Math.sin(angle));
+                        //console.log("x = " + x + "\ny = " + y);
+                        angle = angle + 45.03 / j;
                         count++;
+
                     }
-                }while(count<json.length)
-                console.log(count);
+                }
             }
 
 
         })();
     </script>
-    <div style="width: 40%">
+    <div style="width: 40%; position: absolute; left: 60%">
         <h1 style="color:#045a8d">
             <a href="index.html">@SrBachchan</a>
         </h1>
